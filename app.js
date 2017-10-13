@@ -26,14 +26,14 @@ var pike = {
   //The methods (properties that act like functions) are built with a for loop that cycles through the hoursOpen array. It uses Math.floor(Math.random) and this. to calculate the number of customers min/max and  .push to populate the array.  //method for random customers
   calcranCustHr: function(){
     for(var i = 0 ; i < hoursOpen.length; i++){
-      this.ranCustHr.push(Math.floor(Math.random() * (this.maxCustHour - this.minCustHour + 1)) + this.minCustHour);
+      this.ranCustHr.push(Math.floor(Math.random()) * (this.maxCustHour - this.minCustHour + 1)) + this.minCustHour;
       return this.ranCustHr[i];
 
     }
 
   },
   //method for cookies sold per hour
-  calccookiesSldHr: function(){
+  calcCookiesSldHr: function(){
     for(var j = 0; j < hoursOpen.length; j++){
       this.cookiesSldHr.push(Math.floor(Math.random() * (this.ranCustHr[j])));
 
@@ -46,15 +46,15 @@ var pike = {
     var fnp = document.getElementById('fnp');
 
     this.calcranCustHr();
-    this.calccookiesSldHr();
-
+    this.calcCookiesSldHr();
+    //appends the name of the object in the size h3 to the linked html sheet
     var h3EL = document.createElement('h3');
     h3EL.textContent = this.name;
     fnp.appendChild(h3EL);
-
+   //appends the list, populated with random numbers created by the calcCookiesSldHr and calcranCustHr methods
     for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
-      liEl.textContent = hoursOpen[k] + ' : ' + this.calccookiesSldHr[k] + ' cookies ';
+      liEl.textContent = hoursOpen[k] + ' : ' + this.calcCookiesSldHr[k] + ' cookies ';
 
       pike.appendChild(liEl);
     }
