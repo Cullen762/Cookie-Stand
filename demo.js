@@ -30,7 +30,7 @@ method for cookies sold by the hours
 
    }
 
-}
+},
 
 render: function() {
    var firstAndPike = document.getElementById('1standpike');
