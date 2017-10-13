@@ -36,48 +36,30 @@ var pike = {
   calccookiesSldHr: function(){
     for(var j = 0; j < hoursOpen.length; j++){
       this.cookiesSldHr.push(Math.floor(Math.random() * (this.ranCustHr[j])));
-      console.log(this.calccookiesSldHr[j]);
+
     }
 
   },
   //the render function, this dynamically populates the html page.
   render: function(){
     var pike = document.getElementById('pike');
-    var fnp = doculemtn.getElementById('fnp');
+    var fnp = document.getElementById('fnp');
+
     this.calcranCustHr();
     this.calccookiesSldHr();
+
     var h3EL = document.createElement('h3');
-    h3EL.texrContent = this.name;
-    fnp.appendChild(h3E);
-    for(var k = 0; k < hours.length; k++){
+    h3EL.textContent = this.name;
+    fnp.appendChild(h3EL);
+
+    for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
-      liEl.textContent = hours[k] + ' : ' + this.cookiesSldHr[k] + 'cookies';
-      console.log(liEl);
-      pike.appendChild
+      liEl.textContent = hoursOpen[k] + ' : ' + this.calccookiesSldHr[k] + ' cookies ';
+
+      pike.appendChild(liEl);
     }
 
-  },
-  console.log('doh!');
-
-//   render: function() {
-// var firstAndPike = document.getElementById('1standpike');
-//        var fandp = document.getElementById('fandp');
-//        //calling the methods in an object literal
-//        this.calcRandCustByHour();
-//        this.calcCookieSoldHour();
-//        //Dom manipulation in RL
-//        //created a variable to be able to append an item to our list
-//        //creat a new h3 element
-//        var h3El = document.createElement('h3');
-//        h3EL.textContent = this.name;
-//        fandp.appendChild(h3El);
-//        for(var k =0; k< hours.length; k++){
-//          //stepping through the hours array
-//          var liEl = document.createElement('li');
-//          //creating li elements with text of hours
-//          liEL.textContent = hours[k] + ' : ' + this.cookieSldPerHour[k] + 'cookies';
-//          console.log(liEl);
-//          firstAndPike.appendChild
-//        }
-//   }
+  }
 };
+pike.render();
+// no errors in console, but only the times are rendering, the number of cookies is coming up as "undefined"
