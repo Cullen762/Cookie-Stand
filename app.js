@@ -60,7 +60,7 @@ var pike = {
     for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
       console.log(this.cookiesSoldHr[k]);
-      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + 'cookies ';
+      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + ' cookies ';
 
       pike.appendChild(liEl);
     }
@@ -79,9 +79,9 @@ var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm
 
 var alki = {
   name: 'alki',
-  minCustHour: 23,
-  maxCustHour:65,
-  avgCkieHr:6.3,
+  minCustHour: 2,
+  maxCustHour:16,
+  avgCkieHr:4.6,
   ranCustHr:[],
   cookiesSoldHr:[],
   totalCookies:10,
@@ -124,7 +124,7 @@ var alki = {
     for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
       //console.log(this.cookiesSoldHr[k]);
-      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + 'cookies ';
+      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + ' cookies ';
 
       alkiShop.appendChild(liEl);
     }
@@ -143,9 +143,9 @@ var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm
 // first and Pike
 var seattleCenter = {
   name: 'Seattle Center',
-  minCustHour: 23,
-  maxCustHour:65,
-  avgCkieHr:6.3,
+  minCustHour: 11,
+  maxCustHour:38,
+  avgCkieHr:3.7,
   ranCustHr:[],
   cookiesSoldHr:[],
   totalCookies:10,
@@ -188,7 +188,7 @@ var seattleCenter = {
     for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
       //console.log(this.cookiesSoldHr[k]);
-      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + 'cookies ';
+      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + ' cookies ';
 
       spaceNeedle.appendChild(liEl);
     }
@@ -205,9 +205,9 @@ seattleCenter.render();
 //capitol hill
 var capitolHill = {
   name: 'Capitol Hill',
-  minCustHour: 23,
-  maxCustHour:65,
-  avgCkieHr:6.3,
+  minCustHour: 20,
+  maxCustHour:38,
+  avgCkieHr:2.3,
   ranCustHr:[],
   cookiesSoldHr:[],
   totalCookies:10,
@@ -250,7 +250,7 @@ var capitolHill = {
     for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
       //console.log(this.cookiesSoldHr[k]);
-      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + 'cookies ';
+      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + ' cookies ';
 
       capHill.appendChild(liEl);
     }
@@ -267,9 +267,9 @@ capitolHill.render();
 //SeaTac Airport
 var seaTacAirport = {
   name: 'SeaTac Airport',
-  minCustHour: 23,
-  maxCustHour:65,
-  avgCkieHr:6.3,
+  minCustHour: 3,
+  maxCustHour:24,
+  avgCkieHr:1.2,
   ranCustHr:[],
   cookiesSoldHr:[],
   totalCookies:10,
@@ -312,7 +312,7 @@ var seaTacAirport = {
     for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
       //console.log(this.cookiesSoldHr[k]);
-      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + 'cookies ';
+      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + ' cookies ';
 
       seaTac.appendChild(liEl);
     }
