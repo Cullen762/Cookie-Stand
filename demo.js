@@ -23,7 +23,7 @@ var firstAndPike = {
   }
   }
 };
-method for cookies sold by the hours
+//method for cookies sold by the hours
  calcCookieSldPerHour: function() {
    for(var j = 0;  j < hours.length; j++){
      this.calcCookieSoldHour.push(Math.round(this.avgCookiesSldPerHour * this.randCustPerHour[j]);

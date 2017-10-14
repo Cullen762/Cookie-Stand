@@ -17,26 +17,32 @@ var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm
 // first and Pike
 var pike = {
   name: 'Pike',
-  minCustHour: 1,
-  maxCustHour:2,
-  avgCkieHr:2,
+  minCustHour: 23,
+  maxCustHour:65,
+  avgCkieHr:6.3,
   ranCustHr:[],
-  cookiesSldHr:[],
+  cookiesSoldHr:[],
   totalCookies:0,
   //The methods (properties that act like functions) are built with a for loop that cycles through the hoursOpen array. It uses Math.floor(Math.random) and this. to calculate the number of customers min/max and  .push to populate the array.  //method for random customers
-  calcranCustHr: function(){
+  calcRanCustHr: function(){
     for(var i = 0 ; i < hoursOpen.length; i++){
-      this.ranCustHr.push(Math.floor(Math.random()) * (this.maxCustHour - this.minCustHour + 1)) + this.minCustHour;
-      return this.ranCustHr[i];
-
+      this.ranCustHr.push(Math.floor(Math.random() * (this.maxCustHour - this.minCustHour + 1) + this.minCustHour));
+      //console.log(this.ranCustHr[i]);
     }
 
   },
   //method for cookies sold per hour
-  calcCookiesSldHr: function(){
+  // demo code for reference***
+  // calcCookiesSoldByHour: function() {
+  //   for(var j = 0; j < hours.length; j++) {
+  //     this.cookiesSoldByHour.push(Math.round(this.avgCookieSoldPerHour * this.randCustByHour[j]));
+  //     console.log(this.cookiesSoldByHour[j]);
+  //   }
+  // changed to Math.round still undefined on the page, no errors in console
+  calcCookiesSoldHr: function(){
     for(var j = 0; j < hoursOpen.length; j++){
-      this.cookiesSldHr.push(Math.floor(Math.random() * (this.ranCustHr[j])));
-
+      console.log(Math.round(this.avgCkieHr * this.ranCustHr[j]));
+      this.cookiesSoldHr.push(Math.round(this.avgCkieHr * this.ranCustHr[j]));
     }
 
   },
@@ -45,16 +51,17 @@ var pike = {
     var pike = document.getElementById('pike');
     var fnp = document.getElementById('fnp');
 
-    this.calcranCustHr();
-    this.calcCookiesSldHr();
+    this.calcRanCustHr();
+    this.calcCookiesSoldHr();
     //appends the name of the object in the size h3 to the linked html sheet
     var h3EL = document.createElement('h3');
     h3EL.textContent = this.name;
     fnp.appendChild(h3EL);
-   //appends the list, populated with random numbers created by the calcCookiesSldHr and calcranCustHr methods
+    //appends the list, populated with random numbers created by the calcCookiesSldHr and calcranCustHr methods
     for(var k = 0; k < hoursOpen.length; k++){
       var liEl = document.createElement('li');
-      liEl.textContent = hoursOpen[k] + ' : ' + this.calcCookiesSldHr[k] + ' cookies ';
+      console.log(this.cookiesSoldHr[k]);
+      liEl.textContent = hoursOpen[k] + ' : ' + this.cookiesSoldHr[k] + ' cookies ';// this.calcCookiesSldHr is comming back undefined, brainwork the method and loop, no errors in the console.
 
       pike.appendChild(liEl);
     }
