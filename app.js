@@ -1,13 +1,7 @@
 'use strict';
-// lab 6 build object literals for each store
-//use a method to generate random numbers, for properties min,max,avg,
-//add an array that stores the expected number of cookies sold each hour, and (strecth goal)
-// how many tossers per hour
-// everything is in strict order, text nodes, getEls etc
-//meditate on the DOM tree like a good samurai
-// how to store hours-array
-
-//bench mark object, needs key value pairs/properties and a method to calculate **random customers per hour** (ranCustHr), using Math.floor(Math.random) and this. notation .The Math.floor prevents  too many 2's and 9's. The method needs to include a for loop in the code block to runs the length of the hours array.
+// lab 7 re submit will follow, this is the primary submit (place holder)
+//there are no constructor functions in it YET?
+// I am done for the day, my poor monkey brain is on fire, it burns...it burns..
 
 //the hours open array
 
