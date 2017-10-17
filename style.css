@@ -1,7 +1,18 @@
 body,html{
-  background: #b5383c;
+  background: #d07046;
 }
 
+#y{
+  position: fixed;
+  text-align: center;
+  padding: 10%;
+  padding-right: 50%;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+  margin-top: -40%;
+  margin-left: -2%;
+  margin-right: -2%;
+}
 .z{
   font-size: 18px;
   padding:3%;
@@ -9,15 +20,13 @@ body,html{
   font-family: 'Oswald', sans-serif;background-color: white;
   margin: 15%;
 }
-#y{ padding: 10%;
-  background-color: white;
-font-family: 'Oswald', sans-serif;
-  margin: 15%;
-}
+
 
 #doh{
   padding: 5%;
-  margin: 5%;
+  margin-left: -2%;
+  margin-right: -2%;
+  margin-top: 40%;
   background-color: #506757;
 
 }
