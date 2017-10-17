@@ -5,7 +5,7 @@ body,html{
 #y{
   position: fixed;
   text-align: center;
-  padding: 10%;
+  padding: 5%;
   padding-right: 50%;
   background-color: white;
   font-family: 'Oswald', sans-serif;
@@ -23,7 +23,9 @@ body,html{
 
 
 #doh{
-  padding: 5%;
+
+  padding-top: 0.1%;
+  padding-bottom: 1%;
   margin-left: -2%;
   margin-right: -2%;
   margin-top: 40%;
