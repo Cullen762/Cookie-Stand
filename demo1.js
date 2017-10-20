@@ -31,21 +31,21 @@ function CreateLocation(name,minCustPerHour,maxCustPerHour,avgCookieSoldPerHour)
   allLocations.push(this); //** do not understand this part HERE
 
 
- calcRandCustByHour: function(){
-    for(var i = 0 ; i < hoursOpen.length; i++){
-      this.randCustByHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour));
-      //console.log(this.ranCustHr[i]);
-    }
-
-  },
-
-totalCookiesPerHour: function(){
-    for(var j = 0; j < hoursOpen.length; j++){
-      console.log(Math.round(this.avgCookieSoldPerHour * this.randCustByHour[j]));
-      this.cookiesSoldByHour.push(Math.round(this.avgCookieSoldPerHour * this.randCustByHour[j]));
-    }
-
-  },
+//  calcRandCustByHour: function(){
+//     for(var i = 0 ; i < hoursOpen.length; i++){
+//       this.randCustByHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour));
+//       //console.log(this.ranCustHr[i]);
+//     }
+//
+//   },
+//
+// totalCookiesPerHour: function(){
+//     for(var j = 0; j < hoursOpen.length; j++){
+//       console.log(Math.round(this.avgCookieSoldPerHour * this.randCustByHour[j]));
+//       this.cookiesSoldByHour.push(Math.round(this.avgCookieSoldPerHour * this.randCustByHour[j]));
+//     }
+//
+//   },
   // //augmented assignement
   // //totalCookies
   // calcTotalCookies: function(){
@@ -53,9 +53,9 @@ totalCookiesPerHour: function(){
   //     this.totalCookies += this.cookiesSoldHr[l];
   //   }
   // },
-}
+//}
 //remember to call the METHODS in the constructor that are now prototypes available to the new objects the constructor will MakeLocation
-this.calcRandCustByHour();
+//this.calcRandCustByHour();
 
 //call the functions in a function if you want
 //this constructor function creates five new objects with their own unique values used in properties of this object (name, minCustPerHour, maxCustPerHour, avgCookieSoldPerHour)
