@@ -2,6 +2,12 @@ body,html{
   background: #d07046;
 }
 
+#header{
+  background: black;
+}
+.linx{
+  background-color: white;
+}
 #y{
   position: fixed;
   text-align: center;
