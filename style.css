@@ -32,3 +32,6 @@ body,html{
   background-color: #506757;
 
 }
+#map{
+  float:right;
+}

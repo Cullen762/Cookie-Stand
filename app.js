@@ -1,4 +1,9 @@
 'use strict';
+//***Shitsumon ga arimasu!!
+// Are there other ways of calling the constructor function or does it have to be in the actual function?
+//why wont my table obey?
+
+
 //updating to constructors need the following:
 //create a location function
 //create a location array
@@ -26,67 +31,59 @@ function CreateLocation(name,minCustHour,maxCustHour,avgCkieHr){
   this.totalCookies = 0;
   locations.push(this);
   //this key word indicates the method belongs to the object this function creates
-
   this.calcRanCustHr = function(){//calculates random number of customers by hour
-  for(var i = 0 ; i < hoursOpen.length; i++){
-  this.ranCustHr.push(Math.floor(Math.random() * (this.maxCustHour - this.minCustHour + 1) + this.minCustHour));
-  console.log(this.ranCustHr[i]);
-}
-
-this.calcCookiesSoldHr = function(){
-for(var j = 0; j < hoursOpen.length; j++){
-//console.log(Math.round(this.avgCkieHr * this.ranCustHr[j]));
-this.cookiesSoldHr.push(Math.round(this.avgCkieHr * this.ranCustHr[j]));
+    for(var i = 0 ; i < hoursOpen.length; i++){
+      this.ranCustHr.push(Math.floor(Math.random() * (this.maxCustHour - this.minCustHour + 1) + this.minCustHour));
+      console.log(this.ranCustHr[i]);
+    }
+  },
+  this.calcCookiesSoldHr = function(){
+    for(var j = 0; j < hoursOpen.length; j++){
+      console.log(Math.round(this.avgCkieHr * this.ranCustHr[j]));
+      this.cookiesSoldHr.push(Math.round(this.avgCkieHr * this.ranCustHr[j]));
     }
 
-
-
+  },
 
   this.calcTotalCookies = function(){
-     for( var l = 0 ; l < hoursOpen.length; l++){
-       this.totalCookies += this.cookiesSoldHr[l];
-     }
+    for( var l = 0 ; l < hoursOpen.length; l++){
+      this.totalCookies += this.cookiesSoldHr[l];
+    }
 
-}
-//calling the methods inside the function
-this.calcRanCustHr();
-this.calcCookiesSoldHr();
-this.calcTotalCookies();
-console.log('it Lives!');//it does not live
+  },
+  //calling the methods inside the function
+  this.calcRanCustHr();
+  this.calcCookiesSoldHr();
+  this.calcTotalCookies();
+  //console.log('it Lives!');
 }
 
-function createStands(){ //prototypes
+function CreateStands(){ //a function to call all functions? what are some otherways of doing this?
   new CreateLocation('Pike', 23,65,6.3);
   new CreateLocation('Alki', 2,16,4.6);
   new CreateLocation('Seattle Center', 11,38,3.7);
   new CreateLocation('Capitol Hill',20,38,2.3);
   new CreateLocation('Seatac Airport',3,24,3.2);
+  console.log('created stands!');
+}
+CreateStands(); //calling all prototypes,used upper case letter 'C' now the console logs work, but nothing printing to the page.
 
-createStands();
-
-//time to create the table in javascript
-//make header row
-//table needs an id in html
-
-function buildHeaderRow() {
+function MakeHeaderRow() {
   var cookieShops = document. getElementById('cookieshops'); //getting and existing? element by ID,"GETTER"
   var trEl = document.createElement('tr'); //creating element (table row)
   var thEl = document.createElement('th');// creating element (table head)
   trEl.appendChild(thEl);//appending the child - or - smashing the table row under the table head.
 
-
-  var dailyTotal = document. getElementById('daily total'); //getting and existing? element by ID,"GETTER"
-  var trEl = document.createElement('tr'); //creating element (table row)
+  var dailyTotal = document.getElementById('daily total'); //getting and existing? element by ID,"GETTER"
+  var trEl = document.createElement('tr'); //creating element (table row
   var thEl = document.createElement('th');
   // creating element (table head)
   var h3EL = document.createElement('h3');
   h3El.textContent = this.totalCookies;
   trEL.textContent = this.totalCookies;
   trEl.appendChild(thEl);//appending the child - or - smashing the table row under the table head.
+  MakeHeaderRow();
 }
-}
-buildHeaderRow();
-
 
 // function makeHeaderRow() {
 //   var cookiestands = document.getElementById('cookiestands');
@@ -104,11 +101,7 @@ buildHeaderRow();
 //give the th element text content 'Daily Location Total'
 //append child
 
-
 //remeber to call makeHeaderRow();
-
-
-
 
 
 
