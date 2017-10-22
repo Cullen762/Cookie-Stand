@@ -10,7 +10,6 @@
 //create a total cookies by hour var
 // create a net total?.
 
-//the hours open array
 var shops = document.getElementById('tb'); //grabs existing element in html by ID
 var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 //array for locations
@@ -21,6 +20,9 @@ var totalCookiesPerHour = 0;
 //constructor function - begins with upper case letter - will create new objects for other locations.
 //this keyword points to the property or method in the object that the constructor droid creates
 // the constructor function is like a droid that makes droids with a basic blue print. the parameters are for the properties in the object.
+var submission =  alert ('lab 7 and 8 will be re submitted at a later date, the numbers do change in the table ');
+var anotherSubmission = alert ('expect event listeners next time,');
+//the hours open array
 function CreateLocation(name,minCustHour,maxCustHour,avgCkieHr){
   this.name = name;
   this.minCustHour = minCustHour;
@@ -111,7 +113,6 @@ function makeHeaderRow() {
   header.appendChild(trEl);
 };
 makeHeaderRow();
-//console.log('++++++++ ', locations[0]);
 function allLocations(){
   locations[0].makeBodyRow();
   locations[1].makeBodyRow();
@@ -128,10 +129,10 @@ function makeFooterRow() {
   var trEl = document.createElement('tr'); //creates table row element
   for(var k = 0 ; k < hoursOpen.length; k++){//loops through array hoursOpen
     var tdEl = document.createElement('td');//creates table data element
-    var dailyTotalPerShop = hoursOpen[k];//result of the daily total per shop
-    tdEl.appendChild(dailyTotalPerShop);
-    trEl.appendChild(tdEl);
+    var netTotal = hoursOpen[k];//result of the daily total per shop
+    tdEl.appendChild(trEl);
+    footer.appendChild(trEl);
   }
-  footer.appendChild(trEl);
-};
-// makeFooterRow();
+
+}
+makeFooterRow();
