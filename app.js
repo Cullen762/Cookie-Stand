@@ -1,4 +1,5 @@
 'use strict';
+//debugger;
 //***Shitsumon ga arimasu!!
 // Are there other ways of calling the constructor function or does it have to be in the actual function?
 //why wont my table obey?
@@ -20,8 +21,8 @@ var totalCookiesPerHour = 0;
 //constructor function - begins with upper case letter - will create new objects for other locations.
 //this keyword points to the property or method in the object that the constructor droid creates
 // the constructor function is like a droid that makes droids with a basic blue print. the parameters are for the properties in the object.
-var submission =  alert ('lab 7 and 8 will be re submitted at a later date, the numbers do change in the table ');
-var anotherSubmission = alert ('expect event listeners next time,');
+//var submission =  alert ('lab 7 and 8 will be re submitted at a later date, the numbers do change in the table ');
+//var anotherSubmission = alert ('expect event listeners next time,');
 //the hours open array
 function CreateLocation(name,minCustHour,maxCustHour,avgCkieHr){
   this.name = name;

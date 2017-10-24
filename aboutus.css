@@ -1,0 +1,42 @@
+body{
+  background-image:url(images/family.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#head{
+  background-color:none;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2%;
+
+
+
+
+}
+
+#innerhead{
+  font-family: cursive;
+  font-size:28;
+
+  color: blue;
+}
+
+#text{
+  text-decoration-style: solid;
+  color:blue;
+  font-size: 28px;
+  font-weight: 500;
+  position: sticky;
+  background-color:none;
+  background-position: center;
+  background-size: auto;
+  padding: 2%;
+  margin-top: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+
+#foot{}
