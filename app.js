@@ -60,8 +60,8 @@ function CreateLocation(name,minCustHour,maxCustHour,avgCkieHr){
   this.makeBodyRow = function() {
     console.log('body row');
     var trEl = document.createElement('tr'); //variable(puka) for the tr element
-    var tdEl = document.createElement('td');
-    tdEl.textContent = this.name;
+    var tdEl = document.createElement('td');//
+    tdEl.textContent = this.name;//
     trEl.appendChild(tdEl);
 
     for(var j = 0; j < this.cookiesSoldHr.length; j++){
@@ -87,7 +87,7 @@ function CreateStands(){ //a function to call all functions? what are some other
   new CreateLocation('Seattle Center', 11,38,3.7);
   new CreateLocation('Capitol Hill',20,38,2.3);
   new CreateLocation('Seatac Airport',3,24,3.2);
-  new CreateLocation('Net Total',0,0,0);
+
   //console.log('This lives too!');
 
 }
@@ -115,34 +115,39 @@ function makeHeaderRow() {
   header.appendChild(trEl);
 };
 makeHeaderRow();
-function allLocations(){
+function allLocations(){// use 4 loop with array locations .length
   locations[0].makeBodyRow();
   locations[1].makeBodyRow();
   locations[2].makeBodyRow();
   locations[3].makeBodyRow();
   locations[4].makeBodyRow();
-  locations[5].makeBodyRow();
-
+  //locations[i].makeBodyRow
   console.log('it works!!');
 };
 
 allLocations();
 
+//allhours
+//loop for every store at index 0
 function makeFooterRow() {
   var footer = document.getElementById('foot'); //grabs existing element in html by ID
   var trEl = document.createElement('tr'); //creates table row element
-  for(var k = 0 ; k < hoursOpen.length; k++){//loops through array hoursOpen
-    var tdEl = document.createElement('td');//creates table data element
-    var netTotal = hoursOpen[k];//result of the daily total per shop
-    var text = document.createTextNode(netTotal);
-    //netTotal.textContent = 'Total';
-    tdEl.appendChild(text);
-    trEl.appendChild(tdEl);
-    console.log('doh!');
-  }
+  var tdtotal = document.createElement('td');
+  tdtotal.textContent = 'Net Total';
+  trEl.appendChild(tdtotal);
 
-  // trEl.appendChild(text);
-  // footer.appendChild(netTotal);
+  for( var i = 0; i < hoursOpen.length; i++){
+    var totalCell = document.createElement('td');
+    var totals = 0; //start off with a number or will return string (.textContent)
+    for(var j = 0; j < locations.length; j++){
+
+      totals += locations[j].cookiesSoldHr[i];
+    }
+    totalCell.textContent = totals;
+    //console.log(totals);
+    trEl.appendChild(totalCell);
+  };
+  footer.appendChild(trEl);
 }
 makeFooterRow();
 // *the row is rendering but with 0 values, should I build out a new method? or ....?
