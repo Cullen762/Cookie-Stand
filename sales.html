@@ -10,23 +10,34 @@
     <h3 id='header'>Cookie Sales per location</h3>
     <fieldset id="form">
       <legend>New Shops:</legend>
-      <label>Name <input type="text" name="" value=""></label>
+      <label for="">Name <input type="text" name="" value=""></label>
+      <br/ >
+      <label id="m"for="">Locations</label><form action="index.html">
+        <select class="" name="locations">
+          <option value="">Fremont</option>
+          <option value="">Ballard</option>
+          <option value="">Tweakerville</option>
+          <option value="">Alderan</option>
+          <option value="">George Town</option>
+          <option value="">Beacon Hill</option>
+
+        </select>
+
+      </form>
     <br/ >
-      <label>Location <input type="text" name="" value=""></label>
+      <label>Minimum Numer Of Customers<input type="number" name="" value=""></label>
       <br />
-      <label for="">permits <input type="text" name="" value=""></label>
+      <label for="">Maximum Numer Of Customers<input type="number" name="" value=""></label>
       <br />
-      <label for="">state taxes <input type="text" name="" value=""></label>
-      <br />
-      <label for="">king county taxes <input type="text" name="" value=""></label>
-      <br />
-      <label for="">Federal Taxes <input type="text" name="" value=""></label>
-      <br />
-      <label for="">city taxes <input type="text" name="" value=""></label>
-      <br />
-      <label for="">Sound Transit regional taxes <input type="text" name="" value=""></label>
-      <br />
-      <label for="">Seattle City Council " donations, wink, wink" <input type="text" name="" value=""></label>
+      <label for="">Average Cookies Per Hour <input type="number" name="" value=""></label>
+      <br/>
+      <label for="">Total Daily Cookies <input type="number" name="" value=""></label>
+      <br/>
+      <label for=""></label>
+<form id="n" action="index.html">
+  <input type="submit" name="new store" value="Add New Store">
+
+</form>
     </fieldset>
 <div id="chart">
 <table id='cookieshops'>
