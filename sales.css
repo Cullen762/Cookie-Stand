@@ -1,6 +1,41 @@
 * {
-  background-color: gray;
+  background:gray;
   font-family: 'Roboto', sans-serif;
+
+
 }
 
-/*
+#form {
+  color: white;
+
+
+}
+#m{
+  color:black;
+}
+#n{
+  
+}
+#cookieshops{
+
+  margin: 15%;
+  border: 2px;
+  background: black;
+
+}
+#header{
+  padding-top: 2%;
+  padding-left: 37%;
+  padding-right: 30%;
+  paddding- bottom:15%;
+  background-color: white;
+}
+#tb{
+  background: white;
+  padding: 15%;
+}
+
+.td{
+  background: white;
+  padding: 10%;
+}

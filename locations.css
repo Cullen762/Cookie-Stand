@@ -1,0 +1,50 @@
+
+body{
+  background: gray;
+  padding: 10%;
+}
+
+#lcn{
+  padding: 5%;
+}
+  #head{
+    background: white;
+
+  }
+  #pike{
+
+    padding: 5%;
+    background-image: url(images/market.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+
+
+
+  }
+  #ch{
+    padding: 5%;
+    background-image: url(images/caphill.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+
+  }
+  #Alki{
+    padding: 5%;
+    background-image: url(images/alki.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+
+  }
+  #sc{
+    padding: 5%;
+  background-image: url(images/seattleCenter.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  }
+  #ap{
+    padding: 5%;
+    background-image: url(images/seatac.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
