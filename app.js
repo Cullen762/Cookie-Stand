@@ -115,17 +115,18 @@ function makeHeaderRow() {
   header.appendChild(trEl);
 };
 makeHeaderRow();
-function allLocations(){// use 4 loop with array locations .length
-  locations[0].makeBodyRow();
-  locations[1].makeBodyRow();
-  locations[2].makeBodyRow();
-  locations[3].makeBodyRow();
-  locations[4].makeBodyRow();
-  //locations[i].makeBodyRow
-  console.log('it works!!');
-};
+// function allLocations(){// use 4 loop with array locations .length
+  for( var i = 0; i < locations.length; i++){
 
-allLocations();
+  // locations[0].makeBodyRow();
+  // locations[1].makeBodyRow();
+  // locations[2].makeBodyRow();
+  // locations[3].makeBodyRow();
+  // locations[4].makeBodyRow();
+
+    locations[i].makeBodyRow();
+    console.log('it lives!!');
+  }
 
 //allhours
 //loop for every store at index 0
@@ -150,4 +151,23 @@ function makeFooterRow() {
   footer.appendChild(trEl);
 }
 makeFooterRow();
-// *the row is rendering but with 0 values, should I build out a new method? or ....?
+
+//begin event listener
+var form = document.getElementById('new-store');
+
+form.addEventListener('submit',inputData);
+function inputData(event){
+  event.preventDefault();
+  console.log('event =', event);
+  var storeLocation = event.target.anotherStore.value;
+  var minimumCustomers = event.target.min.value;
+  var maximumCustomers = event.target.max.value;
+  var productAvg = event.target.avg.value;
+  var newStore = new CreateLocation(storeLocation,minimumCustomers,maximumCustomers,productAvg);
+  //event.target.element'id'.value of input
+  console.log(storeLocation);
+  newStore.makeBodyRow();
+
+}
+
+//allLocations();
