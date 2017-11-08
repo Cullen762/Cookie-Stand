@@ -8,37 +8,32 @@
   </head>
   <body>
     <h3 id='header'>Cookie Sales per location</h3>
-    <fieldset id="form">
-      <legend>New Shops:</legend>
-      <label for="">Name <input type="text" name="" value=""></label>
-      <br/ >
-      <label id="m"for="">Locations</label><form action="index.html">
-        <select class="" name="locations">
-          <option value="">Fremont</option>
-          <option value="">Ballard</option>
-          <option value="">Tweakerville</option>
-          <option value="">Alderan</option>
-          <option value="">George Town</option>
-          <option value="">Beacon Hill</option>
 
-        </select>
 
-      </form>
+
+
+      <form id="new-store">
+          <fieldset id="form">
+
+            <legend>New Shops:</legend>
+            <label for="new-location">Locations<input id="anotherStore"type="text" name="" value=""></label>
+            <br/ >
+
     <br/ >
-      <label>Minimum Numer Of Customers<input type="number" name="" value=""></label>
+      <label>Minimum Numer Of Customers<input id="min" type="number" name="" value=""></label>
       <br />
-      <label for="">Maximum Numer Of Customers<input type="number" name="" value=""></label>
+      <label >Maximum Numer Of Customers<input id="max" type="number" name="" value=""></label>
       <br />
-      <label for="">Average Cookies Per Hour <input type="number" name="" value=""></label>
+      <label>Average Cookies Per Hour <input id="avg"type="number" name="" value=""></label>
       <br/>
-      <label for="">Total Daily Cookies <input type="number" name="" value=""></label>
+      
       <br/>
       <label for=""></label>
-<form id="n" action="index.html">
-  <input type="submit" name="new store" value="Add New Store">
 
+  <input type="submit" name="new store" value="Add New Store">
+  </fieldset>
 </form>
-    </fieldset>
+
 <div id="chart">
 <table id='cookieshops'>
 <thead id='th'></thead><!--change th -->
